@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>film</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+  
+  <div>
+    <div class="container">
+      <div class="envelope-wrapper">
+          <div class="envelope">
+              <div class="letter">
+                  <div class="text">
+                      <div class="button-container">
+                        <div class="dog">
+                          <div class="tail"></div>
+                          <div class="body"></div>
+                          <div class="head">
+                            <div class="eyes">
+                              <div class="left"></div>
+                              <div class="right"></div>
+                            </div>
+                            <div class="nuzzle">
+                              <div class="mouth">
+                                <div class="tongue"></div>
+                              </div>
+                              <div class="nose">
+                                <div class="nostrils"></div>
+                                <div class="highlight"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ears">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                          </div>
+                        </div>
+                       
+                          <button id="changeTextButton">
+                            กดตรงนี้งับบ
+                          </button>
+                        
+                        <div class="paw"></div>
+                        <div class="paw top"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="heart"></div>
+      </div>
+
+  </div>
+  <h1>
+    <span>มีของ</span>
+    <span>มาให้</span>
+    <span>เปิด</span>
+    <span>จดหมาย</span>
+    <span>เลยย</span>
+  </h1>
+
+</div>
+ 
+</div>
+    
+    <script>
+
+let clickCount = 0; 
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    clickCount++; 
+
+    if (clickCount === 1) { 
+        button.textContent = 'กดอีก2ครั้งงับบ'; 
+    } else if (clickCount === 2) { 
+        window.location.href = 'loveyou.html'; 
+    }
+
+    setTimeout(() => {
+        clickCount = 0;
+        button.textContent = 'กดตรงนี้งับบ'; 
+    }, 3000); 
+});
+
+ const envelope = document.querySelector('.envelope-wrapper');
+envelope.addEventListener('click', () => {
+    
+    if (!envelope.classList.contains('flap')) {
+        envelope.classList.add('flap');
+    }
+});
+
+    </script>
+</body>
+</html>
